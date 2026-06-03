@@ -108,17 +108,14 @@ public class NotificationService {
         message.setFrom(from);
         message.setTo(recipient);
         message.setSubject("[Phòng khám] Lịch khám của bạn đã bị từ chối");
-        message.setText("""
-                Xin chào %s,
-
-                Rất tiếc, lịch khám của bạn chưa thể được tiếp nhận.
-                - Mã lịch hẹn: %s
-                - Thời gian dự kiến: %s
-                - Lý do từ chối: %s
-
-                Mong bạn thông cảm và hẹn gặp lại bạn ở lần khám sau.
-                Vui lòng đặt lịch mới hoặc liên hệ lễ tân để được hỗ trợ.
-                    """.formatted(
+        message.setText(String.format(
+                "Xin chào %s,\n\n" +
+                        "Rất tiếc, lịch khám của bạn chưa thể được tiếp nhận.\n" +
+                        "- Mã lịch hẹn: %s\n" +
+                        "- Thời gian dự kiến: %s\n" +
+                        "- Lý do từ chối: %s\n\n" +
+                        "Mong bạn thông cảm và hẹn gặp lại bạn ở lần khám sau.\n" +
+                        "Vui lòng đặt lịch mới hoặc liên hệ lễ tân để được hỗ trợ.",
                 patientName,
                 appointment.getId(),
                 appointmentTime,
@@ -168,17 +165,14 @@ public class NotificationService {
         message.setFrom(from);
         message.setTo(recipient);
         message.setSubject("[Phòng khám] Lịch khám của bạn đã được chấp nhận");
-        message.setText("""
-                Xin chào %s,
-
-                Lịch khám của bạn đã được chấp nhận.
-                - Mã lịch hẹn: %s
-                - Ngày giờ khám: %s
-                - Phòng khám: %s
-                - Bác sĩ phụ trách: %s
-
-                Vui lòng đến sớm 10-15 phút để làm thủ tục. Hẹn gặp lại bạn tại phòng khám.
-                    """.formatted(
+        message.setText(String.format(
+                "Xin chào %s,\n\n" +
+                        "Lịch khám của bạn đã được chấp nhận.\n" +
+                        "- Mã lịch hẹn: %s\n" +
+                        "- Ngày giờ khám: %s\n" +
+                        "- Phòng khám: %s\n" +
+                        "- Bác sĩ phụ trách: %s\n\n" +
+                        "Vui lòng đến sớm 10-15 phút để làm thủ tục. Hẹn gặp lại bạn tại phòng khám.",
                 patientName,
                 appointment.getId(),
                 appointmentTime,
@@ -234,15 +228,14 @@ public class NotificationService {
         message.setFrom(from);
         message.setTo(recipients.toArray(new String[0]));
         message.setSubject("[Phòng khám] Có bệnh nhân mới đặt lịch");
-        message.setText("""
-                Lễ tân có lịch hẹn mới:
-                - Mã lịch hẹn: %s
-                - Tên bệnh nhân: %s
-                - Số điện thoại: %s
-                - Thời gian hẹn: %s
-                - Triệu chứng: %s
-                - Trạng thái: %s
-                    """.formatted(
+        message.setText(String.format(
+                "Lễ tân có lịch hẹn mới:\n" +
+                        "- Mã lịch hẹn: %s\n" +
+                        "- Tên bệnh nhân: %s\n" +
+                        "- Số điện thoại: %s\n" +
+                        "- Thời gian hẹn: %s\n" +
+                        "- Triệu chứng: %s\n" +
+                        "- Trạng thái: %s",
                 appointment.getId(),
                 patientName,
                 patientPhone,
@@ -294,22 +287,18 @@ public class NotificationService {
         message.setFrom(from);
         message.setTo(recipient);
         message.setSubject("[Phòng khám] Xin thông tin tài khoản để hoàn tiền");
-        message.setText("""
-                Xin chào %s,
-
-                Phòng khám ghi nhận bạn đã thanh toán tiền khám nhưng chưa thể đến khám.
-                - Mã lịch hẹn: %s
-                - Thời gian hẹn: %s
-                - Số tiền đã thanh toán trước: %s
-
-                Vui lòng phản hồi email này và cung cấp các thông tin sau để phòng khám hoàn tiền:
-                1) Tên chủ tài khoản
-                2) Số tài khoản
-                3) Ngân hàng
-                4) Chi nhánh (nếu có)
-
-                Cảm ơn bạn đã thông cảm và hợp tác.
-                    """.formatted(
+        message.setText(String.format(
+                "Xin chào %s,\n\n" +
+                        "Phòng khám ghi nhận bạn đã thanh toán tiền khám nhưng chưa thể đến khám.\n" +
+                        "- Mã lịch hẹn: %s\n" +
+                        "- Thời gian hẹn: %s\n" +
+                        "- Số tiền đã thanh toán trước: %s\n\n" +
+                        "Vui lòng phản hồi email này và cung cấp các thông tin sau để phòng khám hoàn tiền:\n" +
+                        "1) Tên chủ tài khoản\n" +
+                        "2) Số tài khoản\n" +
+                        "3) Ngân hàng\n" +
+                        "4) Chi nhánh (nếu có)\n\n" +
+                        "Cảm ơn bạn đã thông cảm và hợp tác.",
                 patientName,
                 appointment == null ? "" : appointment.getId(),
                 appointmentTime,
@@ -351,14 +340,12 @@ public class NotificationService {
         message.setFrom(from);
         message.setTo(to);
         message.setSubject("[Phòng khám] Mã OTP đặt lại mật khẩu");
-        message.setText("""
-                Xin chào,
-
-                Mã OTP để đặt lại mật khẩu của bạn là: %s
-                Mã này có hiệu lực trong 10 phút.
-
-                Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này.
-                    """.formatted(otp));
+        message.setText(String.format(
+                "Xin chào,\n\n" +
+                        "Mã OTP để đặt lại mật khẩu của bạn là: %s\n" +
+                        "Mã này có hiệu lực trong 10 phút.\n\n" +
+                        "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này.",
+                otp));
 
         try {
             mailSender.send(message);

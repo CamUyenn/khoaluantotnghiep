@@ -50,27 +50,21 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
                         LocalDateTime from,
                         LocalDateTime to);
 
-        @Query("""
-                        SELECT a
-                        FROM Appointment a
-                        LEFT JOIN a.assignedRoom r
-                        WHERE (a.doctor.id = :doctorId OR r.currentDoctor.id = :doctorId)
-                        AND a.status = :status
-                        ORDER BY a.appointmentTime ASC
-                        """)
+        @Query("SELECT a FROM Appointment a " +
+                        "LEFT JOIN a.assignedRoom r " +
+                        "WHERE (a.doctor.id = :doctorId OR r.currentDoctor.id = :doctorId) " +
+                        "AND a.status = :status " +
+                        "ORDER BY a.appointmentTime ASC")
         List<Appointment> findVisibleForDoctorAndStatusOrderByAppointmentTimeAsc(
                         @Param("doctorId") Long doctorId,
                         @Param("status") String status);
 
-        @Query("""
-                        SELECT a
-                        FROM Appointment a
-                        LEFT JOIN a.assignedRoom r
-                        WHERE (a.doctor.id = :doctorId OR r.currentDoctor.id = :doctorId)
-                        AND a.status = :status
-                        AND a.appointmentTime BETWEEN :from AND :to
-                        ORDER BY a.appointmentTime ASC
-                        """)
+        @Query("SELECT a FROM Appointment a " +
+                        "LEFT JOIN a.assignedRoom r " +
+                        "WHERE (a.doctor.id = :doctorId OR r.currentDoctor.id = :doctorId) " +
+                        "AND a.status = :status " +
+                        "AND a.appointmentTime BETWEEN :from AND :to " +
+                        "ORDER BY a.appointmentTime ASC")
         List<Appointment> findVisibleForDoctorAndStatusAndAppointmentTimeBetweenOrderByAppointmentTimeAsc(
                         @Param("doctorId") Long doctorId,
                         @Param("status") String status,
@@ -99,20 +93,14 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
 
         long countByStatus(String status);
 
-        @Query("""
-                        SELECT COUNT(a)
-                        FROM Appointment a
-                        WHERE MONTH(a.appointmentTime) = :month
-                        AND YEAR(a.appointmentTime) = :year
-                        """)
+        @Query("SELECT COUNT(a) FROM Appointment a " +
+                        "WHERE MONTH(a.appointmentTime) = :month " +
+                        "AND YEAR(a.appointmentTime) = :year")
         long countByMonth(@Param("month") int month, @Param("year") int year);
 
-        @Query("""
-                        SELECT a.doctor.id, COUNT(a)
-                        FROM Appointment a
-                        WHERE a.doctor IS NOT NULL
-                        GROUP BY a.doctor.id
-                        ORDER BY COUNT(a) DESC
-                        """)
+        @Query("SELECT a.doctor.id, COUNT(a) FROM Appointment a " +
+                        "WHERE a.doctor IS NOT NULL " +
+                        "GROUP BY a.doctor.id " +
+                        "ORDER BY COUNT(a) DESC")
         List<Object[]> findTopDoctors();
 }
