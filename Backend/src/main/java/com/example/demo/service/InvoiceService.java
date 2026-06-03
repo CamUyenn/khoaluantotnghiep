@@ -278,10 +278,12 @@ public class InvoiceService {
         Invoice invoice = invoiceRepository.findByMedicalRecord_Id(medicalRecordId)
                 .orElseGet(Invoice::new);
 
-        // Recompute totals even if invoice was previously marked paid. If new
-        // services have been added after a prior payment, we must update the
-        // remaining amount and unmark the invoice as paid when appropriate so
-        // reception/cashier sees the outstanding balance.
+        // Tính toán lại tổng số tiền ngay cả khi hóa đơn đã được đánh dấu là đã thanh
+        // toán trước đó. Nếu các dịch vụ mới được thêm vào sau khoản thanh toán trước
+        // đó,
+        // chúng tôi phải cập nhật số tiền còn lại và bỏ đánh dấu hóa đơn là đã thanh
+        // toán khi thích hợp để
+        // lễ tân/thu ngân thấy số dư còn lại.
 
         List<MedicalRecordServiceDetail> serviceDetails = medicalRecordServiceDetailRepository
                 .findByMedicalRecord_Id(medicalRecordId);
