@@ -1,0 +1,1 @@
+2026-05-18T14:14:12.587+07:00  INFO 6716 --- [demo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

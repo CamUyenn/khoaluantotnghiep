@@ -1,0 +1,577 @@
+.container {
+  padding: 2rem;
+  max-width: none;
+  width: 100%;
+  margin: 0;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.header p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.primaryButton {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.outlineButton {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.danger {
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.filterRow {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.filterPill {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: 500;
+  color: #374151;
+}
+
+.filterActive {
+  border-color: #2563eb;
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.formCard {
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formCard h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.input {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.textarea {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+.errorText {
+  color: #dc2626;
+  font-size: 0.85rem;
+}
+
+.formActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.medicineList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.medicineCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+.ageGroupGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.ageGroupCard {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.ageGroupTitle {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.warningBox {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.templateCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: #ffffff;
+}
+
+.templateHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.templateTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.categoryTag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.templateDescription {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.templateAdvice {
+  font-size: 0.9rem;
+  color: #059669;
+}
+
+.medicineSection {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.medicineSection h4 {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.medicineDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.medicineDetail {
+  font-size: 0.85rem;
+}
+
+.medicineName {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.ageGroupMiniGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.ageGroupMiniCard {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.catalogPanel {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.searchRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.searchInput {
+  flex: 1;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.categoryTabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.75rem 0 1rem;
+}
+
+.categoryTab {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #374151;
+}
+
+.categoryTabActive {
+  border-color: #2563eb;
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.medicineGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.medicineItem {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0.75rem;
+  text-align: left;
+  background: #f9fafb;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.medicineItemActive {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.medicineMeta {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.emptyState {
+  font-size: 0.85rem;
+  color: #6b7280;
+  padding: 0.5rem;
+}
+
+.ageGroupMiniTitle {
+  font-weight: 600;
+  color: #8b5cf6;
+}
+
+.ageGroupMiniText {
+  color: #6b7280;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  color: #9ca3af;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 50;
+}
+
+.modalCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 860px;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.modalHeader {
+  margin-bottom: 1rem;
+}
+
+.modalHeader h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.sectionCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1rem;
+  background: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.commonTable {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.commonRow {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.commonName {
+  font-weight: 600;
+  color: #374151;
+}
+
+.commonInput {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+.commonRowTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.commonRowBottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.commonField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.commonLabel {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.removeIconButton {
+  border: none;
+  background: transparent;
+  color: #b91c1c;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.ageGroupColumns {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ageColumn {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0.75rem;
+  background: #fafafa;
+}
+
+.ageColumnHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.ageTitle {
+  font-weight: 600;
+}
+
+.ageSubtitle {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.ageRows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ageRow {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ageRowLabel {
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.modalMedicineList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modalMedicineCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+.modalMedicineHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.modalAgeGroupList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modalAgeGroupCard {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.modalAgeGroupCard h4 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+  .ageGroupGrid,
+  .ageGroupMiniGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .templateHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ageGroupColumns {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid2,
+  .ageGroupGrid,
+  .ageGroupMiniGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .commonRowBottom {
+    grid-template-columns: 1fr;
+  }
+}

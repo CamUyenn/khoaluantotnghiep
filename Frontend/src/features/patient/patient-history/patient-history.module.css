@@ -1,0 +1,248 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* --- Tinh chỉnh Card Spacer --- */
+.patientCard {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.recordCard {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Patient Info Section --- */
+.patientFlex {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.avatar {
+  width: 4rem;
+  height: 4rem;
+  background-color: #dbeafe; 
+  color: #2563eb; 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.patientInfo {
+  flex: 1;
+}
+
+.patientName {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.infoLabel {
+  color: #6b7280;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.infoValue {
+  font-weight: 500;
+  color: #111827;
+}
+
+/* --- Medical Records Section --- */
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.recordHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.recordLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.recordIcon {
+  width: 3rem;
+  height: 3rem;
+  background-color: #dbeafe;
+  color: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.badgeGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.customBadge {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+}
+
+.recordId {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.costRight {
+  text-align: right;
+}
+
+.costLabel {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.costValue {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #16a34a; 
+}
+
+.costBreakdown {
+  margin-top: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.costBreakdown p {
+  margin: 0;
+}
+
+/* --- Colored Details Blocks --- */
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.block {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.blockBlue {
+  background-color: #eff6ff;
+}
+.blockTitleBlue {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 0.25rem;
+}
+.blockTextBlue {
+  font-size: 0.875rem;
+  color: #1d4ed8;
+}
+
+.blockGreen {
+  background-color: #f0fdf4;
+}
+.blockTitleGreen {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #14532d;
+  margin-bottom: 0.25rem;
+}
+.blockTextGreen {
+  font-size: 0.875rem;
+  color: #15803d;
+}
+
+.blockPurple {
+  background-color: #faf5ff;
+}
+.blockTitlePurple {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #581c87;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.medList {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+  color: #7e22ce;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+}
+
+/* --- Empty State --- */
+.emptyState {
+  padding: 3rem;
+  text-align: center;
+  color: #6b7280;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .recordHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .costRight {
+    text-align: left;
+  }
+}

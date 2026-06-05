@@ -1,0 +1,41 @@
+services:
+  - type: web
+    name: clinic-backend
+    env: docker
+    plan: free
+    dockerContext: Backend
+    dockerfilePath: Backend/Dockerfile
+    healthCheckPath: /v3/api-docs
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: APP_CORS_ALLOWED_ORIGIN_PATTERNS
+        sync: false
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: REDIS_HOST
+        sync: false
+      - key: REDIS_PORT
+        sync: false
+      - key: REDIS_PASSWORD
+        sync: false
+      - key: JWT_ACCESS_TOKEN_SECRET
+        sync: false
+      - key: JWT_REFRESH_TOKEN_SECRET
+        sync: false
+      - key: MAIL_USERNAME
+        sync: false
+      - key: MAIL_PASSWORD
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CLINIC_WORKING_HOURS
+        sync: false
+      - key: CLINIC_HOTLINE
+        sync: false
+      - key: CLINIC_ADDRESS
+        sync: false

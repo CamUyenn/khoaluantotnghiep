@@ -1,0 +1,179 @@
+{
+  "properties": [
+    {
+      "name": "app.cors.allowed-origin-patterns",
+      "type": "java.lang.String",
+      "description": "Comma-separated allowed origin patterns for CORS, e.g. http://localhost:3000."
+    },
+    {
+      "name": "ai.gemini.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable or disable Gemini integration."
+    },
+    {
+      "name": "ai.gemini.api-key",
+      "type": "java.lang.String",
+      "description": "Gemini API key used for authentication."
+    },
+    {
+      "name": "ai.gemini.model",
+      "type": "java.lang.String",
+      "description": "Gemini model identifier."
+    },
+    {
+      "name": "ai.gemini.endpoint",
+      "type": "java.lang.String",
+      "description": "Base endpoint for Gemini API requests."
+    },
+    {
+      "name": "ai.gemini.timeout-seconds",
+      "type": "java.lang.Integer",
+      "description": "Timeout in seconds for Gemini API calls."
+    },
+    {
+      "name": "ai.gemini.history-context-messages",
+      "type": "java.lang.Integer",
+      "description": "Maximum recent history messages included as context when asking Gemini."
+    },
+    {
+      "name": "ai.gemini.history-return-messages",
+      "type": "java.lang.Integer",
+      "description": "Maximum history messages returned for a user when requesting chatbot history."
+    },
+    {
+      "name": "ai.gemini.clinic-working-hours",
+      "type": "java.lang.String",
+      "description": "Clinic business hours text used as fixed chatbot business context."
+    },
+    {
+      "name": "ai.gemini.clinic-hotline",
+      "type": "java.lang.String",
+      "description": "Clinic hotline used in chatbot business context."
+    },
+    {
+      "name": "ai.gemini.clinic-address",
+      "type": "java.lang.String",
+      "description": "Clinic address used in chatbot business context."
+    },
+    {
+      "name": "clinic.notification.receptionist.emails",
+      "type": "java.lang.String",
+      "description": "Comma-separated receptionist email addresses for new booking notifications."
+    },
+    {
+      "name": "auth.forgot-password.otp.ttl-minutes",
+      "type": "java.lang.Long",
+      "description": "Time to live in minutes for forgot-password OTP values."
+    },
+    {
+      "name": "auth.forgot-password.otp.cooldown-seconds",
+      "type": "java.lang.Long",
+      "description": "Cooldown in seconds between two OTP send requests."
+    },
+    {
+      "name": "auth.forgot-password.otp.send-limit-window-minutes",
+      "type": "java.lang.Long",
+      "description": "Window length in minutes for counting OTP send attempts."
+    },
+    {
+      "name": "auth.forgot-password.otp.max-send-attempts",
+      "type": "java.lang.Integer",
+      "description": "Maximum OTP send attempts allowed in one send-limit window."
+    },
+    {
+      "name": "auth.forgot-password.otp.max-invalid-attempts",
+      "type": "java.lang.Integer",
+      "description": "Maximum invalid OTP verification attempts before forcing a new OTP."
+    },
+    {
+      "name": "auth.jwt.access-token.secret",
+      "type": "java.lang.String",
+      "description": "Secret key used to sign and verify access tokens."
+    },
+    {
+      "name": "auth.jwt.refresh-token.secret",
+      "type": "java.lang.String",
+      "description": "Secret key used to sign and verify refresh tokens."
+    },
+    {
+      "name": "auth.jwt.access-token.ttl-seconds",
+      "type": "java.lang.Long",
+      "description": "Access token time-to-live in seconds."
+    },
+    {
+      "name": "auth.jwt.refresh-token.ttl-days",
+      "type": "java.lang.Long",
+      "description": "Refresh token time-to-live in days."
+    },
+    {
+      "name": "payments.reconciliation.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable or disable the payment reconciliation job."
+    },
+    {
+      "name": "payments.reconciliation.fixed-delay-ms",
+      "type": "java.lang.Long",
+      "description": "Fixed delay in milliseconds between reconciliation runs."
+    },
+    {
+      "name": "payments.reconciliation.initial-delay-ms",
+      "type": "java.lang.Long",
+      "description": "Initial delay in milliseconds before first reconciliation run."
+    },
+    {
+      "name": "payments.reconciliation.lookback-minutes",
+      "type": "java.lang.Long",
+      "description": "Lookback window in minutes when scanning recent transactions."
+    },
+    {
+      "name": "payments.refund-request.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable or disable the scheduled refund request email job."
+    },
+    {
+      "name": "payments.refund-request.cron",
+      "type": "java.lang.String",
+      "description": "Cron expression used to trigger refund request emails."
+    },
+    {
+      "name": "payments.refund-request.cutoff-hour",
+      "type": "java.lang.Integer",
+      "description": "Hour of day used to decide when a no-show payment is eligible for a refund request."
+    },
+    {
+      "name": "payments.refund-request.cutoff-minute",
+      "type": "java.lang.Integer",
+      "description": "Minute of hour used with cutoff-hour for refund request eligibility."
+    },
+    {
+      "name": "sepay.api.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable or disable SePay API checks in reconciliation."
+    },
+    {
+      "name": "sepay.api.endpoint",
+      "type": "java.lang.String",
+      "description": "SePay API endpoint to list transactions."
+    },
+    {
+      "name": "sepay.api.auth-token",
+      "type": "java.lang.String",
+      "description": "SePay API bearer token (without the 'Bearer ' prefix)."
+    },
+    {
+      "name": "sepay.api.query",
+      "type": "java.lang.String",
+      "description": "Optional query string to append to SePay API requests."
+    },
+    {
+      "name": "sepay.api.require-amount-match",
+      "type": "java.lang.Boolean",
+      "description": "Require SePay amount_in to meet or exceed invoice total."
+    },
+    {
+      "name": "sepay.api.amount-tolerance",
+      "type": "java.math.BigDecimal",
+      "description": "Allowed tolerance when comparing SePay amount_in with invoice total."
+    }
+  ]
+}

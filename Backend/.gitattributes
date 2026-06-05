@@ -1,0 +1,12 @@
+/mvnw text eol=lf
+*.cmd text eol=crlf
+
+# Normalize line endings and treat common source files as text.
+* text=auto
+*.java text
+*.xml text
+*.properties text
+*.yml text
+*.yaml text
+*.sql text
+*.md text
