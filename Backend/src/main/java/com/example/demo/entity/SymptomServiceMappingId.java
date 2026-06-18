@@ -1,0 +1,17 @@
+package com.example.demo.entity;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import lombok.Data;
+
+@Embeddable
+@Data
+public class SymptomServiceMappingId implements Serializable {
+    @Column(name = "symptom_id")
+    private Long symptomId;
+
+    @Column(name = "service_id")
+    private Long serviceId;
+}

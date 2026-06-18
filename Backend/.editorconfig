@@ -1,0 +1,12 @@
+root = true
+
+[*.{java,xml,properties,yml,yaml,sql,md}]
+charset = utf-8
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.cmd]
+end_of_line = crlf
+
+[mvnw]
+end_of_line = lf

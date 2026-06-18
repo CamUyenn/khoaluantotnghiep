@@ -1,0 +1,108 @@
+.card {
+  margin-top: 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.95rem;
+  padding: 0.95rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.hint {
+  margin-top: 0.2rem;
+  font-size: 0.86rem;
+  color: #64748b;
+}
+
+.referenceBox {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.referenceCode {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.02em;
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.7rem;
+  background: #e2e8f0;
+}
+
+.copyButton {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.7rem;
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+
+.copyButton:hover {
+  background: #f8fafc;
+}
+
+.qrBox {
+  margin-top: 0.9rem;
+  border-top: 1px dashed #cbd5e1;
+  padding-top: 0.9rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.qrTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.qrImage {
+  width: min(280px, 100%);
+  border-radius: 0.9rem;
+  border: 1px solid #dbeafe;
+  background: #fff;
+}
+
+.meta {
+  font-size: 0.87rem;
+  color: #475569;
+}
+
+.error {
+  font-size: 0.87rem;
+  color: #b91c1c;
+}
+
+.statusRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.amountBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: #ecfeff;
+  color: #0f766e;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
